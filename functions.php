@@ -82,7 +82,7 @@ function sed_envia_participante() {
 			$response[ 'cpf_valido' ] = true;
 			$response[ 'duplicado' ] = false;
 			$exclude_numbers = sed_busca_numeros();
-			$novo_numero = sed_gera_numero( 0, 20, $exclude_numbers );
+			$novo_numero = sed_gera_numero( 0, 9999, $exclude_numbers );
 			// Verifica se ainda é possível gerar novos números
 			if( $novo_numero === false ) :
 				$response[ 'message' ] = __( 'Infelimzente não foi possível gerar um novo número para você. A capacidade máxima do sorteio foi atingida.', 'sed' );
